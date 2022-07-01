@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Join Us
+image: book.jpg
+caption: The Latest and Greatest Songbook
 ---
 The Shropshire Strummers meet every week somewhere in Shropshire to share our love of playing the ukulele.
 
