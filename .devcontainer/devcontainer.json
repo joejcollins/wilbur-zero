@@ -1,9 +1,8 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
-	"name": "Java",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+	"name": "Wilbur Zero",
+    "dockerFile": "../Dockerfile",
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
@@ -14,8 +13,8 @@
 		"ghcr.io/devcontainers-contrib/features/starship:1": {}
 	},
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	// Ports for Kafka and optional Spring Boot
+	"forwardPorts": [9092, 8080], 
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "java -version",
@@ -23,8 +22,9 @@
 	// Configure tool-specific properties.
 	"customizations": {
 		"extensions": [
-			"vscjava.vscode-java-pack",       // Java support in VS Code
-			"redhat.vscode-yaml"             // YAML support
+			"ms-azuretools.vscode-docker",
+			"redhat.vscode-yaml",
+			"vscjava.vscode-java-pack"
 		]
 	}
 
