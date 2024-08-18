@@ -1,0 +1,10 @@
+{
+    "recommendations":[
+        "shengchen.vscode-checkstyle",
+        "streetsidesoftware.code-spell-checker",
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven"
+    ]
+}

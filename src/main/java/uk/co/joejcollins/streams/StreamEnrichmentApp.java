@@ -8,7 +8,8 @@ import java.util.Properties;
 
 /**
  * This class represents a simple Kafka Streams application.
- * It reads data from an input topic, enriches it, and writes it to an output topic.
+ * It reads data from an input topic, enriches it, and writes it to an output
+ * topic.
  */
 public class StreamEnrichmentApp {
 
@@ -21,8 +22,10 @@ public class StreamEnrichmentApp {
         Properties config = new Properties();
         config.put(StreamsConfig.APPLICATION_ID_CONFIG, "stream-enrichment-app");
         config.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-        config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, "org.apache.kafka.common.serialization.Serdes$StringSerde");
-        config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, "org.apache.kafka.common.serialization.Serdes$StringSerde");
+        config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG,
+                "org.apache.kafka.common.serialization.Serdes$StringSerde");
+        config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG,
+                "org.apache.kafka.common.serialization.Serdes$StringSerde");
 
         StreamsBuilder builder = new StreamsBuilder();
         KStream<String, String> inputStream = builder.stream("input_topic");

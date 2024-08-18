@@ -2,8 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
 	"name": "Wilbur Zero",
-    "dockerFile": "../Dockerfile",
-
+	"dockerFile": "../Dockerfile",
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
@@ -12,22 +11,24 @@
 		},
 		"ghcr.io/devcontainers-contrib/features/starship:1": {}
 	},
-
 	// Ports for Kafka and optional Spring Boot
-	"forwardPorts": [9092, 8080], 
-
+	"forwardPorts": [
+		9092,
+		8080
+	],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "java -version",
-
 	// Configure tool-specific properties.
 	"customizations": {
 		"extensions": [
+			"shengchen.vscode-checkstyle",
+			"streetsidesoftware.code-spell-checker",
 			"ms-azuretools.vscode-docker",
 			"redhat.vscode-yaml",
-			"vscjava.vscode-java-pack"
+			"vscjava.vscode-java-pack",
+			"vscjava.vscode-maven"
 		]
 	}
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
