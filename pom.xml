@@ -49,6 +49,7 @@
         <dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
+            <version>5.9.3</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -61,7 +62,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.4.0</version>
                 <configuration>
                     <source>18</source>
                     <target>18</target>
@@ -75,7 +76,6 @@
                 <version>3.5.0</version>
                 <configuration>
                     <source>17</source>
-                    <doclet>standard</doclet> <!-- Ensure this is set to 'standard' -->
                     <show>protected</show>
                 </configuration>
             </plugin>

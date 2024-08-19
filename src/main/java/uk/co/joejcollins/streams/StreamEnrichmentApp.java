@@ -14,6 +14,13 @@ import java.util.Properties;
 public class StreamEnrichmentApp {
 
     /**
+     * Default constructor.
+     */
+    public StreamEnrichmentApp() {
+        // Default constructor body (usually empty)
+    }
+
+    /**
      * Main method to start the Kafka Streams application.
      *
      * @param args Command line arguments (not used).
