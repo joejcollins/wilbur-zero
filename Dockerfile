@@ -1,5 +1,5 @@
 # Use a base image with OpenJDK
-FROM mcr.microsoft.com/vscode/devcontainers/java:0-17
+FROM mcr.microsoft.com/devcontainers/java:1-21-bullseye
 
 # Install Kafka
 RUN apt-get update && apt-get install -y wget \
@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y wget \
 
 # Add Kafka to PATH
 ENV PATH=$PATH:/usr/local/kafka/bin
+
+RUN curl https://clickhouse.com/ | sh \
+ && mv clickhouse /usr/local/bin/clickhouse
 
 # Set up the workspace
 WORKDIR /workspace
