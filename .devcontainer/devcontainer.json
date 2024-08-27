@@ -17,8 +17,8 @@
 		9092,
 		8080
 	],
-    // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": ". ./.devcontainer/post-create.sh  > ../post-create-log.txt",
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": ". ./.devcontainer/post-create.sh  > ../post-create-log.txt",
 	// Configure tool-specific properties.
 	"customizations": {
 		"extensions": [
