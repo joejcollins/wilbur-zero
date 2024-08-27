@@ -1,7 +1,7 @@
 # Stage 1: Base image
 #####################
 # Use a base image with OpenJDK (not affected by the Oracle licensing).
-FROM mcr.microsoft.com/devcontainers/java:1-21-bullseye
+FROM mcr.microsoft.com/devcontainers/java:1-21-bullseye AS base
 
 # Stage 2a: Development and test image
 ######################################
