@@ -1,6 +1,9 @@
 # Consistent set of make tasks.
 .DEFAULT_GOAL:= help  # because it's is a safe task.
 
+kafka:  # Start the Kafka server.
+	kafka-server-start.sh /usr/local/kafka/config/kraft/server.properties
+
 .PHONY: docs  # because there is a directory called docs.
 docs:  # Build the Sphinx documentation.
 	mvn javadoc:javadoc
