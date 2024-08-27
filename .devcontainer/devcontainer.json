@@ -16,8 +16,8 @@
 		9092,
 		8080
 	],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "java -version",
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": ". ./.devcontainer/post-create.sh  > ../post-create-log.txt",
 	// Configure tool-specific properties.
 	"customizations": {
 		"extensions": [
@@ -28,7 +28,7 @@
 			"vscjava.vscode-java-pack",
 			"vscjava.vscode-maven"
 		]
-	}
+	},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	"remoteUser": "root"
 }
