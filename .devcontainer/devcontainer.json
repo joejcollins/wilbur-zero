@@ -22,10 +22,12 @@
 	// Configure tool-specific properties.
 	"customizations": {
 		"extensions": [
+			"davidanson.vscode-markdownlint",
+			"ms-azuretools.vscode-docker",
+			"redhat.vscode-xml",
 			"shengchen.vscode-checkstyle",
 			"streetsidesoftware.code-spell-checker",
-			"ms-azuretools.vscode-docker",
-			"redhat.vscode-yaml",
+			"vmware.vscode-spring-boot",
 			"vscjava.vscode-java-pack",
 			"vscjava.vscode-maven"
 		]
