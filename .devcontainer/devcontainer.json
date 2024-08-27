@@ -2,7 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
 	"name": "Wilbur Zero",
-	"dockerFile": "../Dockerfile",
+	"image": "ghcr.io/joejcollins/wilbur-zero-dev:latest",
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
