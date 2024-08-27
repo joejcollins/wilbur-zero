@@ -9,6 +9,7 @@
 			"installMaven": "true",
 			"installGradle": "false"
 		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
 		"ghcr.io/devcontainers-contrib/features/starship:1": {}
 	},
 	// Ports for Kafka and optional Spring Boot

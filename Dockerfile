@@ -1,5 +1,11 @@
-# Use a base image with OpenJDK
+# Stage 1: Base image
+#####################
+# Use a base image with OpenJDK (not affected by the Oracle licensing).
 FROM mcr.microsoft.com/devcontainers/java:1-21-bullseye
+
+# Stage 2a: Development and test image
+######################################
+FROM base AS development
 
 # Install Kafka
 RUN apt-get update && apt-get install -y wget \
@@ -15,5 +21,10 @@ RUN curl https://clickhouse.com/ | sh \
  && ./clickhouse install -y \
  && rm clickhouse
 
-# Set up the workspace
-WORKDIR /workspace
+LABEL org.opencontainers.image.description="lady-penelope development container."
+
+# Stage 2b: Production image
+############################
+FROM base AS production
+
+LABEL org.opencontainers.image.description="lady-penelope production container."
