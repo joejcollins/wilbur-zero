@@ -10,8 +10,10 @@ RUN apt-get update && apt-get install -y wget \
 # Add Kafka to PATH
 ENV PATH=$PATH:/usr/local/kafka/bin
 
+# Install ClickHouse without a password
 RUN curl https://clickhouse.com/ | sh \
- && mv clickhouse /usr/local/bin/clickhouse
+ && ./clickhouse install -y \
+ && rm clickhouse
 
 # Set up the workspace
 WORKDIR /workspace

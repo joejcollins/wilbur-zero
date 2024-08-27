@@ -2,7 +2,7 @@
 .DEFAULT_GOAL:= help  # because it's is a safe task.
 
 clickhouse:  # Start the ClickHouse server
-	sudo -u vscode clickhouse server
+	sudo clickhouse start
 
 .PHONY: docs  # because there is a directory called docs.
 docs:  # Build the Sphinx documentation.
